@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Learnly - AI-Powered Learning & Career Platform
 
 A modern, award-level learning platform built with **React 18 + Vite** on the frontend and **Node.js + Express** on the backend. Powered by **Gemini AI** (kept strictly server-side), **MongoDB Atlas** for data, and **Cloudinary** for media storage.
@@ -416,3 +417,6 @@ Design principles (anti-AI-slop):
 
 MIT - Learnly is a demo project. Course content is illustrative.
 
+=======
+# learnly-platform
+>>>>>>> a33f3ff60928c4537f37ec9d84d2dd5c6dedf56f
