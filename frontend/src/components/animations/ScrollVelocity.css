@@ -1,0 +1,17 @@
+.scroll-velocity-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scroll-velocity-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  will-change: transform;
+}
+
+.scroll-velocity-text {
+  display: inline-block;
+  padding-right: 2rem;
+}

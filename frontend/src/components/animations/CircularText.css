@@ -1,0 +1,21 @@
+.circular-text-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.circular-text-char {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 0;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: pre;
+}

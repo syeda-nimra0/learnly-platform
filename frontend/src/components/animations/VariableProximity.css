@@ -1,0 +1,17 @@
+.variable-proximity-container {
+  display: inline-block;
+  position: relative;
+}
+
+.variable-proximity-text {
+  display: inline-block;
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 400;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+  /* fallback if Cabinet Grotesk variable axis is not available */
+}
+
+.variable-proximity-letter {
+  display: inline-block;
+  will-change: font-variation-settings;
+}

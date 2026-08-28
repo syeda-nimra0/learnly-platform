@@ -1,0 +1,261 @@
+/* Custom cursor */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #0A0A0A;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate3d(0, 0, 0) translate(-50%, -50%);
+  will-change: transform, opacity;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #0A0A0A;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate3d(0, 0, 0) translate(-50%, -50%);
+  will-change: transform;
+  transition: width 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              height 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              background 0.25s ease,
+              border-color 0.25s ease;
+}
+
+.custom-cursor-ring.is-hover {
+  width: 56px;
+  height: 56px;
+  background: rgba(128, 183, 250, 0.1);
+  border-color: #80B7FA;
+}
+
+.custom-cursor-ring.is-down {
+  width: 24px;
+  height: 24px;
+}
+
+.custom-cursor-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  color: #0A0A0A;
+}
+
+/* Crosshair */
+.crosshair-line {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.25;
+  will-change: transform;
+}
+.crosshair-horizontal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  transform: translateY(0);
+}
+.crosshair-vertical {
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  transform: translateX(0);
+}
+
+/* Expandable panel */
+.expandable-panel {
+  display: flex;
+  width: 100%;
+}
+
+.expandable-panel-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.expandable-panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.6) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.expandable-panel-item:hover .expandable-panel-overlay {
+  opacity: 1;
+}
+
+.expandable-panel-alt {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+/* Text loader */
+.text-loader {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.text-loader-dots {
+  display: inline-block;
+  margin-left: 2px;
+}
+
+.text-loader-dot {
+  opacity: 0.2;
+  transition: opacity 0.3s ease;
+}
+
+.text-loader-dot.is-on {
+  opacity: 1;
+}
+
+/* Flowing menu */
+.flowing-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.flowing-menu-item {
+  position: relative;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+.flowing-menu-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.flowing-menu-content {
+  padding: 0.5rem 0;
+}
+
+.flowing-menu-label {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.flowing-menu-description {
+  font-size: 0.95rem;
+  color: #6B7280;
+  margin-top: 0.5rem;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+/* Animated list */
+.animated-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.animated-list-item {
+  position: relative;
+}
+
+/* Scroll stack */
+.scroll-stack-container {
+  position: relative;
+}
+
+.scroll-stack-sticky {
+  position: sticky;
+  top: 10vh;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-stack-card {
+  position: absolute;
+  width: 80%;
+  max-width: 800px;
+  height: 60vh;
+  background: white;
+  border: 1px solid #E5E9F0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(to right, #000 1px, transparent 1px),
+    linear-gradient(to bottom, #000 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Line clamp utilities (in case Tailwind doesn't ship them) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Marquee track */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 40s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* VariableProximity uses Cabinet Grotesk variable axes */
+.variable-proximity-text {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-weight: 400;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
+}
+
+.variable-proximity-letter {
+  display: inline-block;
+  will-change: font-variation-settings;
+}
