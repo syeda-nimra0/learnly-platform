@@ -58,6 +58,21 @@ app.get('/health', (req, res) => {
   })
 })
 
+// --- Ensure MongoDB connection on every request (Vercel serverless safety net) ---
+// On Vercel, cold starts run in a fresh Lambda where `connectDB()` from server
+// startup may not have run. This middleware guarantees a connection exists
+// before any route handler executes. On warm requests it returns instantly
+// from the cached connection.
+app.use(async (req, _res, next) => {
+  try {
+    await connectDB()
+  } catch (e) {
+    // Logged inside connectDB; we still call next() so the route handler
+    // can produce a proper 500 response via the error handler.
+  }
+  next()
+})
+
 // --- API routes ---
 app.use('/api/auth', authRoutes)
 app.use('/api/ai', aiRoutes)
