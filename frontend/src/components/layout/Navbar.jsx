@@ -78,7 +78,6 @@ export default function Navbar() {
               alt="Learnly"
               className="h-7 md:h-9 w-auto transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="font-bold text-xl md:text-2xl tracking-tightest">Learnly</span>
           </Link>
 
           {/* Desktop nav */}
