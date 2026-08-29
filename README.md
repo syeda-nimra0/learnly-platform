@@ -1,263 +1,264 @@
-<<<<<<< HEAD
-# Learnly - AI-Powered Learning & Career Platform
+<div align="center">
 
-A modern, award-level learning platform built with **React 18 + Vite** on the frontend and **Node.js + Express** on the backend. Powered by **Gemini AI** (kept strictly server-side), **MongoDB Atlas** for data, and **Cloudinary** for media storage.
+<!-- Animated Logo / Title -->
+<img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1787922537/7bc43e7b-a879-44bb-b0a6-240e1f7e3af3_jx8ygs.png" width="120" height="120" alt="Learnly Logo" />
 
-> Learnly does not simply give users courses. Learnly helps users understand **what to learn, why to learn it, how to learn it and what to do next.**
+# 🎓 Learnly
+
+### *Learn what matters. Become who you want.*
+
+**An AI-powered, award-level learning & career platform that doesn't just hand you courses — it helps you understand *what* to learn, *why* to learn it, *how* to learn it, and *what to do next*.**
+
+<br />
+
+<!-- Live Badges -->
+[![Live Frontend](https://img.shields.io/badge/LIVE-frontend-80B7FA?style=for-the-badge&logo=vercel&logoColor=white)](https://learnly-platform.vercel.app)
+[![Live API](https://img.shields.io/badge/LIVE-api-0A0A0A?style=for-the-badge&logo=vercel&logoColor=white)](https://learnly-platform-i32x.vercel.app/health)
+[![Status](https://img.shields.io/badge/status-production%20ready-brightgreen?style=for-the-badge)]()
+[![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)]()
+
+<br />
+
+<!-- Tech Stack Badges -->
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=flat-square&logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express-4-000000?style=flat-square&logo=express&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Gemini AI](https://img.shields.io/badge/Google-Gemini-4285F4?style=flat-square&logo=google&logoColor=white)
+![Cloudinary](https://img.shields.io/badge/Cloudinary-Media-3448C5?style=flat-square&logo=cloudinary&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=flat-square&logo=vercel&logoColor=white)
+
+<br />
+
+<!-- Tagline -->
+```text
+┌─────────────────────────────────────────────────────────────┐
+│  🚀  AI-driven learning paths · 🎯  Personalized journeys   │
+│  📚  Smart course catalog     · 🤖  Gemini-powered mentors   │
+│  🏆  Achievement system        · ☁️  Serverless on Vercel   │
+└─────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+<br />
 
 ---
 
-## Tech Stack
+## 🌟 Why Learnly? — The Differentiator
 
-| Layer            | Tech                                                            |
-| ---------------- | --------------------------------------------------------------- |
-| Frontend         | React 18 + Vite (JavaScript, no TypeScript)                     |
-| Styling          | Tailwind CSS + custom Cabinet Grotesk font                      |
-| Animations       | Framer Motion, GSAP, custom WebGL shaders, Lenis smooth scroll  |
-| Backend          | Node.js + Express                                               |
-| Database         | MongoDB Atlas (Mongoose)                                        |
-| Auth             | JWT access + refresh tokens, bcrypt password hashing, httpOnly cookies |
-| AI               | Google Gemini API (server-side only, never exposed to client)   |
-| Media            | Cloudinary (uploads, transforms, delivery)                      |
-| Rate limiting    | express-rate-limit                                              |
+> Most learning platforms dump a course list on you. **Learnly doesn't.**
+
+| Other Platforms | Learnly |
+|-----------------|---------|
+| Static catalog | AI-curated paths based on your goals |
+| Generic recommendations | Personalized onboarding + journey |
+| Certificate-only outcomes | Career-aligned skill roadmap |
+| Cookie-cutter UI | WebGL shaders · Lenis smooth scroll · GSAP animations |
+| API keys in frontend (🤦) | Gemini key stays server-side, **always** |
+
+<br />
 
 ---
 
-## Project Structure
+## ✨ Features
+
+### 🤖 AI-Powered Learning (Server-side Gemini)
+- **AI Chat Mentor** — Personal tutor that answers your questions in real-time
+- **Smart Quiz Generator** — AI creates quizzes from course material
+- **Auto Notes Generator** — Summarize any lesson instantly
+- **Translation Engine** — Multi-language content delivery
+- **Career Path Suggester** — AI-driven career recommendations
+
+### 🎓 Learning Experience
+- **Personalized Onboarding** — Goal, job title, education-based journey
+- **Smart Course Catalog** — Search, filter, recently viewed
+- **Progress Tracking** — Module-level progress with completion %
+- **Quiz System** — Submit answers, get instant feedback
+- **Achievements & Certificates** — Gamified learning rewards
+
+### 👤 User System
+- **JWT Auth** — Access + refresh tokens (httpOnly cookies)
+- **Profile Management** — Avatar (Cloudinary), bio, age, role
+- **Onboarding Flow** — Personalized learning setup
+- **Role-based Access** — Student, Instructor, Admin
+
+### 🎨 Frontend Polish (Award-level)
+- **WebGL Shaders** — Custom OGL-based animations
+- **GSAP + Framer Motion** — Smooth, choreographed transitions
+- **Lenis Smooth Scroll** — Buttery scroll experience
+- **Cabinet Grotesk Typography** — Editorial-grade type system
+- **Dark Mode Ready** — Designed with depth and contrast
+
+<br />
+
+---
+
+## 🏗️ Architecture
+
+```mermaid
+graph TB
+    subgraph Browser["🌐 Browser (Client)"]
+        UI[React 18 + Vite SPA]
+        UI -->|Axios + withCredentials| LB
+    end
+
+    subgraph Vercel["☁️ Vercel (Serverless)"]
+        subgraph Frontend["Frontend Project"]
+            FE[React Build<br/>Static CDN]
+        end
+        subgraph Backend["Backend Project (API)"]
+            LB[Vercel Load Balancer]
+            LB --> SF1[Serverless Fn 1]
+            LB --> SF2[Serverless Fn 2]
+            LB --> SF3[Serverless Fn N]
+            SF1 & SF2 & SF3 --> EX[Express App]
+            EX --> CORS[CORS Middleware]
+            EX --> RL[Rate Limiter]
+            EX --> AUTH[JWT Auth MW]
+            EX --> R[Routes: /auth /ai /courses /enrollments /profile]
+            R --> CTRL[Controllers]
+            CTRL --> SVC[Services Layer]
+            SVC --> GEM[Gemini AI Service]
+            SVC --> CLOU[Cloudinary Service]
+        end
+    end
+
+    subgraph External["🔧 External Services"]
+        MDB[(MongoDB Atlas<br/>Users · Courses · Enrollments)]
+        GEMINI[Google Gemini API]
+        CDN[Cloudinary CDN<br/>Media Storage]
+    end
+
+    UI -.->|Static Assets| FE
+    SVC --> MDB
+    GEM --> GEMINI
+    CLOU --> CDN
+
+    style UI fill:#80B7FA,stroke:#0A0A0A,color:#000
+    style FE fill:#61DAFB,stroke:#0A0A0A,color:#000
+    style EX fill:#000000,stroke:#80B7FA,color:#fff
+    style MDB fill:#47A248,stroke:#0A0A0A,color:#fff
+    style GEMINI fill:#4285F4,stroke:#fff,color:#fff
+    style CDN fill:#3448C5,stroke:#fff,color:#fff
+```
+
+<br />
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology | Purpose |
+|-------|-----------|---------|
+| **Frontend** | React 18 + Vite | Fast SPA with HMR |
+| **Styling** | Tailwind CSS 3 | Utility-first design system |
+| **Animations** | Framer Motion + GSAP + OGL | Choreographed motion & WebGL |
+| **Smooth Scroll** | Lenis | Buttery scroll experience |
+| **Backend** | Node.js + Express | REST API server |
+| **Database** | MongoDB Atlas + Mongoose 8 | Cloud document storage |
+| **Auth** | JWT + bcrypt + httpOnly cookies | Secure credential flow |
+| **AI** | Google Gemini (gemini-2.5-flash) | Server-side AI inference |
+| **Media** | Cloudinary | Image upload & delivery |
+| **Security** | Helmet + CORS + express-rate-limit | Defense in depth |
+| **Hosting** | Vercel (Serverless) | Both frontend + backend |
+
+<br />
+
+---
+
+## 📂 Project Structure
 
 ```
 learnly/
-├── frontend/            # React + Vite frontend application
+├── 📁 frontend/                # React + Vite frontend application
 │   ├── src/
-│   │   ├── components/  # UI, animations, layout, sections, cards
-│   │   ├── pages/       # All routes (landing, onboarding, dashboard, etc.)
-│   │   ├── context/     # Auth + Toast contexts
-│   │   ├── lib/         # API client, utilities, animation variants
-│   │   ├── data/        # Seed course catalog, careers, skills
-│   │   └── hooks/       # Custom React hooks
-│   ├── .env.example     # Frontend env vars (no secrets!)
-│   ├── package.json
-│   ├── vite.config.js
-│   └── tailwind.config.js
+│   │   ├── 📁 components/       # 39 components across 6 categories
+│   │   │   ├── animations/      # 19 — Framer Motion + GSAP pieces
+│   │   │   ├── sections/        # 12 — Landing page sections
+│   │   │   ├── ui/              # 5  — Reusable UI primitives
+│   │   │   ├── layout/          # 2  — Navbar + Footer
+│   │   │   ├── auth/            # 1  — Auth guard
+│   │   │   └── cards/           # 1  — Course card
+│   │   ├── 📁 pages/            # 16 routes
+│   │   │   ├── Landing.jsx      # Hero + sections
+│   │   │   ├── Onboarding.jsx   # Personalization flow
+│   │   │   ├── Explore.jsx      # Course catalog
+│   │   │   ├── CourseDetail.jsx # Course view
+│   │   │   ├── Learn.jsx        # Learning dashboard
+│   │   │   ├── Lesson.jsx       # Single lesson
+│   │   │   ├── Profile.jsx      # User profile
+│   │   │   ├── MyLearning.jsx   # Enrolled courses
+│   │   │   ├── Universities.jsx # University listings
+│   │   │   ├── Degrees.jsx      # Degree programs
+│   │   │   ├── Government.jsx   # Govt initiatives
+│   │   │   ├── Business.jsx     # B2B page
+│   │   │   ├── Welcome.jsx      # Post-signup welcome
+│   │   │   ├── Login.jsx
+│   │   │   ├── Signup.jsx
+│   │   │   └── NotFound.jsx
+│   │   ├── 📁 context/          # Auth + Toast contexts
+│   │   ├── 📁 lib/              # API client, utilities
+│   │   ├── 📁 data/             # Seed courses, careers, skills
+│   │   └── 📁 hooks/            # Custom React hooks
+│   ├── tailwind.config.js       # Custom design tokens
+│   ├── vite.config.js           # Vite config + manual chunks
+│   └── vercel.json              # SPA rewrite rules
 │
-├── backend/             # Node.js + Express API server
+├── 📁 backend/                  # Node.js + Express API server
 │   ├── src/
-│   │   ├── routes/      # /auth, /ai, /courses, /enrollments, etc.
-│   │   ├── controllers/ # Request handlers
-│   │   ├── services/    # geminiService, cloudinaryService, etc.
-│   │   ├── middleware/  # auth, rateLimit, errorHandler, cors
-│   │   ├── config/      # env loader + DB connection
-│   │   └── server.js    # Express app entry
-│   ├── .env.example     # Backend env vars (all secrets live here)
-│   └── package.json
+│   │   ├── 📁 config/           # env.js + db.js (Vercel-ready caching)
+│   │   ├── 📁 routes/           # /auth /ai /courses /enrollments /profile
+│   │   ├── 📁 controllers/      # Request handlers
+│   │   ├── 📁 services/         # geminiService, cloudinaryService, authService
+│   │   ├── 📁 middleware/       # auth, cors, rateLimit, errorHandler
+│   │   ├── 📁 models/           # User, Course, Enrollment (Mongoose schemas)
+│   │   └── server.js            # Express entry (Vercel serverless export)
+│   └── vercel.json              # @vercel/node config
 │
-├── .env.example         # Root env template (covers both sides)
-├── package.json         # Root scripts (dev runs both frontend + backend)
-└── README.md            # This file
+├── 📁 download/                 # Final deliverables
+├── .env.example                 # Combined env var reference
+├── DEPLOYMENT.md                # Step-by-step Vercel guide
+└── package.json                 # Root scripts (concurrently)
 ```
+
+<br />
 
 ---
 
-## Quick Start
+## 🚀 Quick Start
 
-### 1. Install dependencies
-
-```bash
-cd learnly
-npm run install:all
-```
-
-This installs root, frontend, and backend dependencies in one go.
-
-### 2. Set up environment variables
-
-Copy the example env files and fill them in:
+### ⚡ One-liner (Development)
 
 ```bash
-cp .env.example frontend/.env
-cp .env.example backend/.env
-# Or use the more granular templates inside each folder
-cp frontend/.env.example frontend/.env
-cp backend/.env.example backend/.env
-```
-
-Edit the `.env` files (see sections below for each service).
-
-### 3. Run the dev servers
-
-```bash
+git clone https://github.com/syeda-nimra0/learnly-platform.git && \
+cd learnly-platform && \
+npm run install:all && \
 npm run dev
 ```
 
-This launches both:
-- Frontend on http://localhost:5173
-- Backend on http://localhost:5000
+This spins up **both frontend + backend concurrently** with hot reload.
+
+- 🖥️ Frontend: http://localhost:5173
+- ⚙️ Backend: http://localhost:5000
+
+### 📋 Prerequisites
+
+- Node.js 18+ (see `.nvmrc`)
+- MongoDB Atlas account (free tier is fine)
+- Google Gemini API key
+- Cloudinary account (free tier is fine)
+
+<br />
 
 ---
 
-## Cloudinary Setup (Image & Media Storage)
+## 🔐 Environment Variables
 
-Cloudinary is used for profile pictures, course thumbnails, lesson resources, generated PDFs, and any user-uploaded files. MongoDB only stores the **URL string**, never the binary.
-
-### Step 1 - Create a Cloudinary account
-
-1. Go to https://cloudinary.com/users/register_free and sign up (free tier is generous).
-2. After verifying your email, log in to the dashboard.
-
-### Step 2 - Grab your credentials
-
-On the Cloudinary dashboard home page you will see three values:
-
-| Field              | What it is                                  | Where it goes                     |
-| ------------------ | ------------------------------------------- | --------------------------------- |
-| **Cloud name**     | Public, identifies your account bucket      | `CLOUDINARY_CLOUD_NAME`           |
-| **API Key**        | Public identifier (still keep it server-side) | `CLOUDINARY_API_KEY`            |
-| **API Secret**     | **SECRET** - never expose to the frontend   | `CLOUDINARY_API_SECRET`           |
-
-### Step 3 - Add to `backend/.env`
-
-```env
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-CLOUDINARY_UPLOAD_FOLDER=learnly
-```
-
-### Step 4 - Upload preset (optional, for direct browser uploads)
-
-If you ever want users to upload directly to Cloudinary (bypassing your backend), create an **unsigned upload preset**:
-
-1. Dashboard → Settings → Upload → Upload presets → Add upload preset
-2. Set **Signing Mode** = **Unsigned**
-3. Set a folder (e.g. `learnly/profiles`)
-4. Save and copy the preset name into `frontend/.env` as `VITE_CLOUDINARY_UPLOAD_PRESET`
-
-> For maximum security, **route all uploads through your Express backend** instead of using unsigned presets. The backend signs each upload request with your API secret so the secret never reaches the browser. The included `cloudinaryService` does exactly this.
-
-### Step 5 - Already-configured brand assets
-
-The Learnly logo and favicon are already hosted on Cloudinary and referenced in the frontend:
-
-- Logo: `https://res.cloudinary.com/dy7z0znum/image/upload/v1787922582/f4b70d0c-b23b-4131-9b5a-babc30819215-removebg-preview_ciyhvj.png`
-- Favicon: `https://res.cloudinary.com/dy7z0znum/image/upload/v1787922537/7bc43e7b-a879-44bb-b0a6-240e1f7e3af3_jx8ygs.png`
-
-You do **not** need to re-upload these.
-
----
-
-## Gemini API Setup (CRITICAL - Security)
-
-**The Gemini API key must NEVER touch the browser.** Vite exposes any variable prefixed with `VITE_` to the client bundle, so we never use `VITE_GEMINI_API_KEY`. The key lives **only** in `backend/.env` and is consumed by the Express server.
-
-### Step 1 - Get a Gemini API key
-
-1. Go to https://aistudio.google.com/apikey
-2. Sign in with a Google account
-3. Click **Create API key**
-4. Copy the key (it starts with `AIza...`)
-
-### Step 2 - Add to `backend/.env` ONLY
-
-```env
-GEMINI_API_KEY=AIzaSy...your_key_here
-GEMINI_MODEL=gemini-1.5-flash
-```
-
-**NEVER** put this in:
-- `frontend/.env`
-- Any `VITE_*` variable
-- Git commits
-- Frontend source code
-- Browser localStorage / sessionStorage
-
-### Step 3 - How requests flow
-
-```
-React frontend
-    │
-    │  POST /api/ai/chat  { message, context, feature }
-    │  (sends only JWT auth cookie, never the API key)
-    ▼
-Express backend  (verifies JWT, rate-limits, validates input)
-    │
-    │  Calls Gemini SDK with GEMINI_API_KEY from process.env
-    ▼
-Google Gemini API
-    │
-    ▼
-Validated, sanitized response  ─►  back to frontend
-```
-
-### Step 4 - What the backend protects against
-
-The `/api/ai/chat` endpoint includes:
-- **JWT auth required** - no anonymous AI calls
-- **Rate limiting** - 20 requests / minute / user
-- **Input length cap** - max 8000 chars per message
-- **Feature allowlist** - only `career_navigator | course_advisor | lesson_tutor | quiz_generator | study_planner | notes_pdf | translation | resume | progress` are accepted
-- **Context validation** - server derives the user's identity from the JWT, never trusts client-supplied user IDs
-- **Timeout** - 30s hard limit
-- **Error sanitization** - never returns Gemini API errors or stack traces to the client
-
----
-
-## MongoDB Atlas Setup
-
-### Step 1 - Create a free cluster
-
-1. Go to https://www.mongodb.com/cloud/atlas/register
-2. Create a free **M0** cluster (512MB, enough for development)
-3. Pick a cloud provider and region close to your users
-
-### Step 2 - Create a database user
-
-1. Left sidebar → **Database Access** → **Add new database user**
-2. Set a strong username + password (save these!)
-3. Role: **Read and write to any database** (dev only - tighten in production)
-
-### Step 3 - Allow network access
-
-1. Left sidebar → **Network Access** → **Add IP address**
-2. For dev, click **Allow access from anywhere** (`0.0.0.0/0`)
-3. For production, add only your hosting provider's IPs
-
-### Step 4 - Get the connection string
-
-1. Left sidebar → **Database** → **Connect** → **Drivers** → **Node.js**
-2. Copy the string. It looks like:
-   ```
-   mongodb+srv://<username>:<password>@cluster0.abc123.mongodb.net/?retryWrites=true&w=majority
-   ```
-3. Replace `<username>` and `<password>` with your user
-
-### Step 5 - Add to `backend/.env`
-
-```env
-MONGODB_URI=mongodb+srv://learnly_user:your_password@cluster0.abc123.mongodb.net/learnly?retryWrites=true&w=majority
-```
-
----
-
-## Frontend Environment Variables
-
-Edit `frontend/.env`:
-
-```env
-# Backend API URL (no secrets here!)
-VITE_API_URL=http://localhost:5000/api
-
-# Cloudinary cloud name ONLY - this is public, used for image URL construction
-VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name
-
-# Optional: only if you use unsigned browser uploads (not recommended for production)
-VITE_CLOUDINARY_UPLOAD_PRESET=learnly_unsigned
-```
-
----
-
-## Backend Environment Variables
-
-Edit `backend/.env`:
+<details>
+<summary><b>📁 Backend <code>backend/.env</code></b> — <i>click to expand</i></summary>
 
 ```env
 # Server
@@ -265,19 +266,19 @@ PORT=5000
 NODE_ENV=development
 CLIENT_URL=http://localhost:5173
 
-# MongoDB
-MONGODB_URI=mongodb+srv://user:password@cluster.mongodb.net/learnly?retryWrites=true&w=majority
+# MongoDB Atlas
+MONGODB_URI=mongodb+srv://USER:PASS@cluster.mongodb.net/learnly?appName=Learnly
 
-# JWT secrets (use long random strings - generate with: openssl rand -hex 32)
-JWT_ACCESS_SECRET=replace_with_64_char_random_hex_string
-JWT_REFRESH_SECRET=replace_with_another_64_char_random_hex_string
+# JWT secrets (generate: openssl rand -hex 32)
+JWT_ACCESS_SECRET=your_64_char_hex_secret
+JWT_REFRESH_SECRET=another_64_char_hex_secret
 JWT_ACCESS_EXPIRES=15m
 JWT_REFRESH_EXPIRES=7d
 COOKIE_SECURE=false
 
-# Gemini API (NEVER EXPOSE TO FRONTEND)
-GEMINI_API_KEY=AIzaSy...
-GEMINI_MODEL=gemini-1.5-flash
+# Gemini AI (server-side ONLY — NEVER expose)
+GEMINI_API_KEY=your_gemini_key
+GEMINI_MODEL=gemini-2.5-flash
 GEMINI_TIMEOUT_MS=30000
 GEMINI_MAX_INPUT_CHARS=8000
 
@@ -287,136 +288,288 @@ CLOUDINARY_API_KEY=your_api_key
 CLOUDINARY_API_SECRET=your_api_secret
 CLOUDINARY_UPLOAD_FOLDER=learnly
 
-# Rate limiting
+# Rate Limiting
 RATE_LIMIT_WINDOW_MS=60000
 RATE_LIMIT_MAX=100
 AI_RATE_LIMIT_MAX=20
 ```
 
----
+</details>
 
-## Available Scripts
+<details>
+<summary><b>📁 Frontend <code>frontend/.env</code></b> — <i>click to expand</i></summary>
 
-| Command                  | Description                                    |
-| ------------------------ | ---------------------------------------------- |
-| `npm run install:all`    | Install root + frontend + backend deps         |
-| `npm run dev`            | Run both frontend and backend concurrently     |
-| `npm run dev:frontend`   | Run only the Vite dev server                   |
-| `npm run dev:backend`    | Run only the Express server (with nodemon)     |
-| `npm run build`          | Build the frontend for production              |
-| `npm start`              | Start the backend in production mode           |
+```env
+# Backend API URL (no secrets here!)
+VITE_API_URL=http://localhost:5000/api
 
----
+# Cloudinary cloud name (PUBLIC — used to build image URLs)
+VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name
+```
 
-## Pages & Routes
+</details>
 
-| Route                  | Page               | Description                                    |
-| ---------------------- | ------------------ | ---------------------------------------------- |
-| `/`                    | Landing            | Hero, careers, courses, AI, FAQ, etc.          |
-| `/login`               | Login              | Email + password                               |
-| `/signup`              | Signup             | Create account                                 |
-| `/onboarding`          | Onboarding         | 5-step wizard (goal → roles → skills → job → education) |
-| `/welcome`             | Welcome            | "Welcome, {name}" post-onboarding              |
-| `/explore`             | Course Catalog     | Search, filter, sort, pagination               |
-| `/courses/:id`         | Course Detail      | Modules, lessons, enroll button                |
-| `/my-learning`         | My Learning        | Enrolled courses list                          |
-| `/learn/:courseId`     | Learning Dashboard | 3 levels (Foundation / Practice / Job Ready)   |
-| `/learn/:id/lesson/:lid` | Lesson           | Lesson content + Learnly AI tutor              |
-| `/profile`             | Profile            | Bio, DP, achievements, progress                |
-| `/degrees`             | Degrees            | Degree programs catalog                        |
-| `/business`            | Business           | Learnly for Business                           |
-| `/universities`        | Universities       | Learnly for Universities                       |
-| `/government`          | Government         | Learnly for Government                         |
+> ⚠️ **Security Note:** `VITE_` prefixed variables are embedded in the browser bundle. **Never** put API keys, JWT secrets, or passwords in `frontend/.env`.
+
+<br />
 
 ---
 
-## Learnly AI Features
+## 📡 API Reference
 
-The AI assistant is accessed through the chat widget (bottom-right corner on every authenticated page). It supports 9 specialized modes:
+<details>
+<summary><b>🔑 Auth Routes (<code>/api/auth</code>)</b></summary>
 
-1. **Career Navigator** - Recommends career paths based on onboarding answers
-2. **Course Advisor** - Analyzes course suitability, prerequisites
-3. **Lesson Tutor** - Explains current lesson concepts
-4. **AI Quiz Generator** - Creates practice quizzes (MCQ, true/false, scenario)
-5. **Study Planner** - Daily/weekly learning plans
-6. **Notes & PDF Assistant** - Generates revision notes + downloadable PDFs
-7. **Translation Assistant** - Translates course content preserving code syntax
-8. **Career & Resume Assistant** - Resume builder using only verified data
-9. **Learning Progress Assistant** - Explains progress, identifies weak areas
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `POST` | `/signup` | ❌ | Create new account |
+| `POST` | `/login` | ❌ | Login + set refresh cookie |
+| `POST` | `/refresh` | 🍪 | Refresh access token |
+| `POST` | `/logout` | ✅ | Clear auth cookies |
+| `GET` | `/me` | ✅ | Get current user |
+| `PATCH` | `/me` | ✅ | Update profile |
+| `POST` | `/onboarding` | ✅ | Complete onboarding |
 
----
+</details>
 
-## Deployment Guide
+<details>
+<summary><b>🤖 AI Routes (<code>/api/ai</code>)</b></summary>
 
-### Frontend → Vercel / Netlify
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `POST` | `/chat` | ✅ | AI chat mentor |
+| `POST` | `/quiz` | ✅ | Generate quiz from content |
+| `POST` | `/notes` | ✅ | Generate study notes |
+| `POST` | `/translate` | ✅ | Translate content |
+| `GET` | `/career-path` | ✅ | Get AI career suggestions |
+| `GET` | `/features` | ❌ | List available AI features |
 
-1. Build: `npm run build --prefix frontend`
-2. Output dir: `frontend/dist`
-3. Set env vars in the hosting dashboard:
-   - `VITE_API_URL=https://your-backend-url.com/api`
-   - `VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name`
-4. **Do NOT** set `GEMINI_API_KEY`, `MONGODB_URI`, or any backend secret here
+</details>
 
-### Backend → Railway / Render / Fly.io / VPS
+<details>
+<summary><b>📚 Course Routes (<code>/api/courses</code>)</b></summary>
 
-1. Deploy the `backend/` folder
-2. Set ALL backend env vars in the hosting dashboard (never commit `.env`)
-3. Set `CLIENT_URL` to your deployed frontend URL
-4. Set `COOKIE_SECURE=true` for HTTPS
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `GET` | `/` | ❌ | List courses (paginated) |
+| `GET` | `/search?q=` | ❌ | Search courses |
+| `GET` | `/:id` | ❌ | Get course details |
+| `GET` | `/:id/modules` | ❌ | Get course modules |
+| `GET` | `/categories` | ❌ | List categories |
+| `GET` | `/recently-viewed` | ✅ | User's recent views |
+| `POST` | `/:id/view` | ✅ | Track course view |
 
-### Database → MongoDB Atlas
+</details>
 
-Already cloud-hosted. Just make sure your backend host IP is whitelisted in Atlas Network Access.
+<details>
+<summary><b>🎓 Enrollment Routes (<code>/api/enrollments</code>)</b></summary>
 
-### Cloudinary
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `GET` | `/` | ✅ | List user enrollments |
+| `POST` | `/` | ✅ | Enroll in course |
+| `GET` | `/:courseId` | ✅ | Get enrollment detail |
+| `PATCH` | `/:courseId/progress` | ✅ | Update progress |
+| `POST` | `/:courseId/quizzes/:quizId/submit` | ✅ | Submit quiz answers |
 
-Already cloud-hosted. No deployment needed.
+</details>
 
----
+<details>
+<summary><b>👤 Profile Routes (<code>/api/profile</code>)</b></summary>
 
-## Security Checklist
+| Method | Endpoint | Auth | Description |
+|--------|----------|------|-------------|
+| `GET` | `/` | ✅ | Get profile |
+| `PATCH` | `/` | ✅ | Update profile |
+| `POST` | `/avatar` | ✅ | Upload avatar (Cloudinary) |
+| `GET` | `/achievements` | ✅ | List achievements |
+| `GET` | `/certificates` | ✅ | List certificates |
 
-- [x] Gemini API key only in `backend/.env`, never in `frontend/.env`
-- [x] No `VITE_GEMINI_API_KEY` anywhere
-- [x] JWT stored in httpOnly cookies, not localStorage
-- [x] bcrypt password hashing (cost factor 12)
-- [x] Refresh token rotation
-- [x] Rate limiting on all endpoints, especially `/api/ai/*`
-- [x] CORS configured to only allow `CLIENT_URL`
-- [x] Helmet for secure HTTP headers
-- [x] Input validation on every route
-- [x] Server-side authorization (never trust client-supplied user IDs)
-- [x] `.env` files in `.gitignore`
-- [x] No secrets in source code
-- [x] Error responses sanitized (no stack traces leaked)
-- [x] File upload validation (MIME type + size limit)
+</details>
 
----
-
-## Design System
-
-| Token              | Value      | Usage                              |
-| ------------------ | ---------- | ---------------------------------- |
-| Primary            | `#80B7FA`  | Buttons, links, active states      |
-| Secondary          | `#95C3FA`  | Hover, gradients, accents          |
-| Black              | `#000000`  | Body text, headers                 |
-| White              | `#FFFFFF`  | Backgrounds                        |
-| Font               | Cabinet Grotesk | All UI text                  |
-
-Design principles (anti-AI-slop):
-- No emojis in the UI - SVG icons only
-- Restrained use of shadows and gradients
-- Borders + whitespace create structure, not glassmorphism
-- Different visual treatments per section (no monotonous card grids)
-- Editorial typography hierarchy
-- Touch-friendly on mobile
+<br />
 
 ---
 
-## License
+## 🎨 Design System
 
-MIT - Learnly is a demo project. Course content is illustrative.
+Learnly uses a custom design language built on Tailwind:
 
-=======
-# learnly-platform
->>>>>>> a33f3ff60928c4537f37ec9d84d2dd5c6dedf56f
+| Token | Value | Usage |
+|-------|-------|-------|
+| `learnly.primary` | `#80B7FA` | Brand blue |
+| `learnly.secondary` | `#95C3FA` | Lighter blue |
+| `learnly.dark` | `#0A0A0A` | Deep background |
+| `learnly.paper` | `#FFFFFF` | Card surfaces |
+| `learnly.mist` | `#F6F8FC` | Subtle backgrounds |
+| `fontFamily.display` | Cabinet Grotesk | Headings + body |
+
+**Typography Scale:** Up to `text-11xl` (14rem) for hero headlines, with `tracking-ultra` (-0.08em) for that editorial tight feel.
+
+<br />
+
+---
+
+## ☁️ Deployment
+
+Learnly is **fully deployed on Vercel** as 2 separate projects:
+
+| Project | URL | Stack |
+|---------|-----|-------|
+| 🌐 Frontend | `learnly-platform.vercel.app` | React + Vite (static) |
+| ⚙️ Backend | `learnly-platform-i32x.vercel.app` | Express (serverless) |
+
+📖 **Full deployment guide:** See [`DEPLOYMENT.md`](./DEPLOYMENT.md)
+
+<details>
+<summary><b>🚀 Quick Deploy Summary</b></summary>
+
+1. **MongoDB Atlas:** Add `0.0.0.0/0` to Network Access
+2. **Backend on Vercel:**
+   - Root Directory: `backend`
+   - Add all env vars (NODE_ENV=production, MONGODB_URI, JWT secrets, Gemini, Cloudinary, CLIENT_URL)
+   - Deploy
+3. **Frontend on Vercel:**
+   - Root Directory: `frontend`
+   - Add `VITE_API_URL=https://your-backend.vercel.app/api`
+   - Add `VITE_CLOUDINARY_CLOUD_NAME=your_cloud`
+   - Deploy
+4. **Update backend `CLIENT_URL`** with frontend URL → Redeploy backend
+
+</details>
+
+<br />
+
+---
+
+## 📊 Project Stats
+
+```
+┌─────────────────────────────────────────────────────┐
+│  📁 Total Files (JS/JSX)        :  70+ frontend     │
+│  🎨 Custom Components            :  39               │
+│  📄 Pages (Routes)               :  16               │
+│  🎬 Animation Components         :  19               │
+│  🔌 API Endpoints                :  25+              │
+│  🗄️ Database Models              :  3                │
+│  🤖 AI Features                  :  5                │
+│  🔒 Auth Layers                  :  3 (JWT+cookie+bcrypt) │
+└─────────────────────────────────────────────────────┘
+```
+
+<br />
+
+---
+
+## 🛡️ Security Highlights
+
+- ✅ **No secrets in frontend** — Gemini API key, JWT secrets, MongoDB URI all stay server-side
+- ✅ **httpOnly cookies** — Refresh tokens inaccessible to JavaScript
+- ✅ **`SameSite=None` + `Secure`** — Cross-domain cookie protection (production)
+- ✅ **bcrypt password hashing** — Industry-standard password storage
+- ✅ **Helmet** — Secure HTTP headers
+- ✅ **Rate limiting** — Separate limits for general API + auth + AI
+- ✅ **CORS allowlist** — Only specific origins allowed (no wildcard)
+- ✅ **JWT access + refresh** — Short-lived access (15m) + long-lived refresh (7d)
+
+<br />
+
+---
+
+## 🧪 Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start frontend + backend concurrently (with color-coded logs) |
+| `npm run dev:frontend` | Start only frontend |
+| `npm run dev:backend` | Start only backend |
+| `npm run install:all` | Install root + frontend + backend deps |
+| `npm run build` | Build frontend for production |
+| `npm run start` | Start backend in production mode |
+| `npm run seed --prefix backend` | Seed database with sample data |
+
+<br />
+
+---
+
+## 🗺️ Roadmap
+
+- [x] 🎉 Initial release
+- [x] 🔐 JWT auth + refresh tokens
+- [x] 🤖 Gemini AI integration
+- [x] 📚 Course catalog + enrollment
+- [x] 🏆 Achievements + certificates
+- [x] ☁️ Vercel deployment
+- [ ] 💬 Real-time chat (Socket.io)
+- [ ] 📊 Analytics dashboard
+- [ ] 🌐 Multi-language UI
+- [ ] 📱 PWA + mobile app
+- [ ] 🎥 Video lessons streaming
+- [ ] 👥 Social learning features
+
+<br />
+
+---
+
+## 🤝 Contributing
+
+This is a personal project, but suggestions are welcome! Feel free to:
+
+1. 🍴 Fork the repo
+2. 🌿 Create a branch (`git checkout -b feature/amazing-feature`)
+3. 💾 Commit changes (`git commit -m 'Add amazing feature'`)
+4. 🚀 Push to branch (`git push origin feature/amazing-feature`)
+5. 📬 Open a Pull Request
+
+<br />
+
+---
+
+## 📝 License
+
+Distributed under the **MIT License**. See `LICENSE` for more information.
+
+<br />
+
+---
+
+## 👩‍💻 Author
+
+<div align="center">
+
+**Syeda Nimra**
+
+[![GitHub](https://img.shields.io/badge/GitHub-syeda--nimra0-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/syeda-nimra0)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Learnly-80B7FA?style=for-the-badge&logo=vercel&logoColor=white)](https://learnly-platform.vercel.app)
+
+</div>
+
+<br />
+
+---
+
+<div align="center">
+
+### 💜 Made with love & lots of coffee
+
+**If this project helped you, give it a ⭐!**
+
+![Stars](https://img.shields.io/github/stars/syeda-nimra0/learnly-platform?style=social)
+![Forks](https://img.shields.io/github/forks/syeda-nimra0/learnly-platform?style=social)
+
+<br />
+
+```text
+  ╔═══════════════════════════════════════════════╗
+  ║  "The capacity to learn is a gift;            ║
+  ║   the ability to learn is a skill;            ║
+  ║   the willingness to learn is a choice."      ║
+  ║                  — Brian Herbert              ║
+  ╚═══════════════════════════════════════════════╝
+```
+
+<br />
+
+**🚀 Live Demo:** [learnly-platform.vercel.app](https://learnly-platform.vercel.app)
+
+</div>
