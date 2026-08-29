@@ -4,22 +4,29 @@ import { env } from '../config/env.js'
 /**
  * Build the list of allowed origins.
  *
+ * In production, we ONLY allow the configured CLIENT_URL.
  * In dev, we allow several common Vite ports so the frontend works even
  * if 5173 is taken and Vite falls back to 5174, 5175, etc.
- *
- * In production, we ONLY allow the configured CLIENT_URL.
  */
 function getAllowedOrigins() {
   const origins = new Set()
 
   if (env.isProd) {
-    if (env.clientUrl) origins.add(env.clientUrl)
+    if (env.clientUrl) origins.add(env.clientUrl.replace(/\/$/, ''))
+    // Also allow EXTRA_CORS_ORIGINS in prod (comma-separated)
+    if (env.extraCorsOrigins) {
+      env.extraCorsOrigins
+        .split(',')
+        .map((s) => s.trim().replace(/\/$/, ''))
+        .filter(Boolean)
+        .forEach((o) => origins.add(o))
+    }
     return Array.from(origins)
   }
 
   // Dev mode - be permissive about ports but only on localhost
   const devOrigins = [
-    'https://learnly-platform.vercel.app/',
+    'http://localhost:5173',
     'http://localhost:5174',
     'http://localhost:5175',
     'http://localhost:4173', // vite preview
@@ -28,12 +35,13 @@ function getAllowedOrigins() {
   ]
   devOrigins.forEach((o) => origins.add(o))
 
-  if (env.clientUrl) origins.add(env.clientUrl)
+  if (env.clientUrl) origins.add(env.clientUrl.replace(/\/$/, ''))
 
   // Allow any extra origins specified via env, comma-separated
   if (env.extraCorsOrigins) {
-    env.extraCorsOrigins.split(',')
-      .map((s) => s.trim())
+    env.extraCorsOrigins
+      .split(',')
+      .map((s) => s.trim().replace(/\/$/, ''))
       .filter(Boolean)
       .forEach((o) => origins.add(o))
   }
@@ -61,9 +69,9 @@ export const corsMiddleware = cors({
     }
 
     // Don't throw - just reject. cors() will then NOT set Access-Control-Allow-Origin
-    // and the browser will block the request. We return a 403-friendly null with error.
-    console.warn(`[cors] Blocked origin: ${origin}`)
-    return callback(null, false) // false = do not allow, but don't throw
+    // and the browser will block the request.
+    console.warn(`[cors] Blocked origin: ${origin}. Allowed: ${allowed.join(', ')}`)
+    return callback(null, false)
   },
   credentials: true,
   methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
