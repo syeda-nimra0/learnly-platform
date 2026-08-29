@@ -19,7 +19,7 @@ function getAllowedOrigins() {
 
   // Dev mode - be permissive about ports but only on localhost
   const devOrigins = [
-    'http://localhost:5173',
+    'https://learnly-platform-i32x.vercel.app/',
     'http://localhost:5174',
     'http://localhost:5175',
     'http://localhost:4173', // vite preview
