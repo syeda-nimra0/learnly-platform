@@ -1,17 +1,15 @@
 <div align="center">
 
-<!-- Animated Logo / Title -->
 <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1787922537/7bc43e7b-a879-44bb-b0a6-240e1f7e3af3_jx8ygs.png" width="120" height="120" alt="Learnly Logo" />
 
 # 🎓 Learnly
 
 ### *Learn what matters. Become who you want.*
 
-**An AI-powered, award-level learning & career platform that doesn't just hand you courses — it helps you understand *what* to learn, *why* to learn it, *how* to learn it, and *what to do next*.**
+**An AI-powered learning & career platform that doesn't just hand you courses — it helps you understand *what* to learn, *why* to learn it, *how* to learn it, and *what to do next*.**
 
 <br />
 
-<!-- Live Badges -->
 [![Live Frontend](https://img.shields.io/badge/LIVE-frontend-80B7FA?style=for-the-badge&logo=vercel&logoColor=white)](https://learnly-platform.vercel.app)
 [![Live API](https://img.shields.io/badge/LIVE-api-0A0A0A?style=for-the-badge&logo=vercel&logoColor=white)](https://learnly-platform-i32x.vercel.app/health)
 [![Status](https://img.shields.io/badge/status-production%20ready-brightgreen?style=for-the-badge)]()
@@ -19,7 +17,6 @@
 
 <br />
 
-<!-- Tech Stack Badges -->
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-7-646CFF?style=flat-square&logo=vite&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-20-339933?style=flat-square&logo=node.js&logoColor=white)
@@ -32,7 +29,6 @@
 
 <br />
 
-<!-- Tagline -->
 ```text
 ┌─────────────────────────────────────────────────────────────┐
 │  🚀  AI-driven learning paths · 🎯  Personalized journeys   │
@@ -47,17 +43,91 @@
 
 ---
 
-## 🌟 Why Learnly? — The Differentiator
+## 📸 Screenshots — See Learnly in Action
 
-> Most learning platforms dump a course list on you. **Learnly doesn't.**
+> Take a visual tour through Learnly's key pages — from landing to AI-powered guidance.
 
-| Other Platforms | Learnly |
-|-----------------|---------|
-| Static catalog | AI-curated paths based on your goals |
-| Generic recommendations | Personalized onboarding + journey |
-| Certificate-only outcomes | Career-aligned skill roadmap |
-| Cookie-cutter UI | WebGL shaders · Lenis smooth scroll · GSAP animations |
-| API keys in frontend (🤦) | Gemini key stays server-side, **always** |
+### 🏠 1. Landing Page — Hero Section
+
+<p align="center">
+  <a href="https://learnly-platform.vercel.app" target="_blank">
+    <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1788015539/Screenshot_2026-08-29_195735_gcgl0e.png" alt="Learnly Landing Page — Hero Section" width="100%" />
+  </a>
+</p>
+
+> *"Learn what matters, become who you want."*
+>
+> The hero section immediately communicates Learnly's value proposition — AI-powered learning that adapts to you. The subtle grid background, mixed typography (bold + italic), and the signature **blue accent on "become"** create a memorable first impression. A floating compass icon with a live AI indicator sits in the corner.
+
+<br />
+
+---
+
+### 🎯 2. Personalized Onboarding — Goal Selection
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1788015606/Screenshot_2026-08-29_195947_wkxzsc.png" alt="Learnly Onboarding — Goal Selection Cards" width="100%" />
+</p>
+
+> *"A learning path built around you."*
+>
+> Unlike generic catalogs, Learnly segments users into 4 goal-based journeys: **Start my career**, **Change my career**, **Grow in my current role**, or **Explore topics outside of work**. Each selection feeds into Learnly AI's recommendation engine, shaping a unique learning path that adapts as the user progresses.
+
+<br />
+
+---
+
+### 📚 3. Course Catalog — Find Your Next Course
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1788015784/Screenshot_2026-08-29_200212_yfhuhb.png" alt="Learnly Course Catalog — Browse 12 Courses" width="100%" />
+</p>
+
+> *"Find your next course"*
+>
+> Browse **12 courses across 12 categories** with a clean card-based grid. Filter, sort by popularity, search by keyword, and spot bestsellers with badges like *"Bestseller"*, *"Free trial"*, and *"Most popular"*. Every card is designed for at-a-glance decisions.
+
+<br />
+
+---
+
+### 💼 4. Learnly for Business — B2B Solutions
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1788015890/Screenshot_2026-08-29_200429_kfbmma.png" alt="Learnly for Business — Enterprise Solutions" width="100%" />
+</p>
+
+> *"Close team skill gaps for what is next."*
+>
+> A dedicated B2B marketing page for teams and enterprises. Highlights Learnly's value for upskilling teams, closing skill gaps, and preparing organizations for the future. Features dual CTAs: *"Try Learnly for Business"* and *"Browse team courses"*.
+
+<br />
+
+---
+
+### 🏛️ 5. Learnly for Government — Public Sector Training
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1788015982/Screenshot_2026-08-29_200605_epvxdd.png" alt="Learnly for Government — Public Workforce Training" width="100%" />
+</p>
+
+> *"Train a workforce ready for the next decade."*
+>
+> A specialized page for government and public sector organizations. Showcases Learnly's capability to train large-scale workforces with curated curriculum aligned to public sector needs.
+
+<br />
+
+---
+
+### 🤖 6. AI Course Adviser — Your Personal Learning Mentor
+
+<p align="center">
+  <img src="https://res.cloudinary.com/dy7z0znum/image/upload/v1788016082/Screenshot_2026-08-29_200740_mmx72i.png" alt="Learnly AI Course Adviser — Chat Interface" width="100%" />
+</p>
+
+> *"Which course is suitable for me?"* — *Just ask.*
+>
+> The AI Course Adviser uses **Google Gemini** (server-side, never exposed to the client) to recommend personalized courses based on user goals, interests, and skill level. The interface features tabbed navigation across 5 AI tools: **Career Navigator**, **Course Adviser**, **Lesson Tutor**, **Quiz Generator**, and **Study Plan**.
 
 <br />
 
@@ -66,11 +136,13 @@
 ## ✨ Features
 
 ### 🤖 AI-Powered Learning (Server-side Gemini)
-- **AI Chat Mentor** — Personal tutor that answers your questions in real-time
-- **Smart Quiz Generator** — AI creates quizzes from course material
-- **Auto Notes Generator** — Summarize any lesson instantly
-- **Translation Engine** — Multi-language content delivery
-- **Career Path Suggester** — AI-driven career recommendations
+| Feature | Description |
+|---------|-------------|
+| **AI Chat Mentor** | Personal tutor that answers your questions in real-time |
+| **Smart Quiz Generator** | AI creates quizzes from course material |
+| **Auto Notes Generator** | Summarize any lesson instantly |
+| **Translation Engine** | Multi-language content delivery |
+| **Career Path Suggester** | AI-driven career recommendations |
 
 ### 🎓 Learning Experience
 - **Personalized Onboarding** — Goal, job title, education-based journey
@@ -90,7 +162,6 @@
 - **GSAP + Framer Motion** — Smooth, choreographed transitions
 - **Lenis Smooth Scroll** — Buttery scroll experience
 - **Cabinet Grotesk Typography** — Editorial-grade type system
-- **Dark Mode Ready** — Designed with depth and contrast
 
 <br />
 
@@ -102,7 +173,6 @@
 graph TB
     subgraph Browser["🌐 Browser (Client)"]
         UI[React 18 + Vite SPA]
-        UI -->|Axios + withCredentials| LB
     end
 
     subgraph Vercel["☁️ Vercel (Serverless)"]
@@ -110,15 +180,13 @@ graph TB
             FE[React Build<br/>Static CDN]
         end
         subgraph Backend["Backend Project (API)"]
-            LB[Vercel Load Balancer]
+            LB[Load Balancer]
             LB --> SF1[Serverless Fn 1]
             LB --> SF2[Serverless Fn 2]
-            LB --> SF3[Serverless Fn N]
-            SF1 & SF2 & SF3 --> EX[Express App]
-            EX --> CORS[CORS Middleware]
-            EX --> RL[Rate Limiter]
-            EX --> AUTH[JWT Auth MW]
-            EX --> R[Routes: /auth /ai /courses /enrollments /profile]
+            LB --> SFN[Serverless Fn N]
+            SF1 & SF2 & SFN --> EX[Express App]
+            EX --> MW[Middleware Stack<br/>CORS · Helmet · Rate Limit · Auth]
+            MW --> R[Routes: /auth /ai /courses /enrollments /profile]
             R --> CTRL[Controllers]
             CTRL --> SVC[Services Layer]
             SVC --> GEM[Gemini AI Service]
@@ -129,10 +197,11 @@ graph TB
     subgraph External["🔧 External Services"]
         MDB[(MongoDB Atlas<br/>Users · Courses · Enrollments)]
         GEMINI[Google Gemini API]
-        CDN[Cloudinary CDN<br/>Media Storage]
+        CDN[Cloudinary CDN]
     end
 
     UI -.->|Static Assets| FE
+    UI -->|Axios + Cookies| LB
     SVC --> MDB
     GEM --> GEMINI
     CLOU --> CDN
@@ -173,7 +242,7 @@ graph TB
 
 ```
 learnly/
-├── 📁 frontend/                # React + Vite frontend application
+├── 📁 frontend/                # React + Vite frontend
 │   ├── src/
 │   │   ├── 📁 components/       # 39 components across 6 categories
 │   │   │   ├── animations/      # 19 — Framer Motion + GSAP pieces
@@ -207,7 +276,7 @@ learnly/
 │   ├── vite.config.js           # Vite config + manual chunks
 │   └── vercel.json              # SPA rewrite rules
 │
-├── 📁 backend/                  # Node.js + Express API server
+├── 📁 backend/                  # Node.js + Express API
 │   ├── src/
 │   │   ├── 📁 config/           # env.js + db.js (Vercel-ready caching)
 │   │   ├── 📁 routes/           # /auth /ai /courses /enrollments /profile
@@ -218,7 +287,6 @@ learnly/
 │   │   └── server.js            # Express entry (Vercel serverless export)
 │   └── vercel.json              # @vercel/node config
 │
-├── 📁 download/                 # Final deliverables
 ├── .env.example                 # Combined env var reference
 ├── DEPLOYMENT.md                # Step-by-step Vercel guide
 └── package.json                 # Root scripts (concurrently)
@@ -247,9 +315,9 @@ This spins up **both frontend + backend concurrently** with hot reload.
 ### 📋 Prerequisites
 
 - Node.js 18+ (see `.nvmrc`)
-- MongoDB Atlas account (free tier is fine)
+- MongoDB Atlas account (free tier works)
 - Google Gemini API key
-- Cloudinary account (free tier is fine)
+- Cloudinary account (free tier works)
 
 <br />
 
@@ -393,8 +461,6 @@ VITE_CLOUDINARY_CLOUD_NAME=your_cloud_name
 
 ## 🎨 Design System
 
-Learnly uses a custom design language built on Tailwind:
-
 | Token | Value | Usage |
 |-------|-------|-------|
 | `learnly.primary` | `#80B7FA` | Brand blue |
@@ -416,8 +482,8 @@ Learnly is **fully deployed on Vercel** as 2 separate projects:
 
 | Project | URL | Stack |
 |---------|-----|-------|
-| 🌐 Frontend | `learnly-platform.vercel.app` | React + Vite (static) |
-| ⚙️ Backend | `learnly-platform-i32x.vercel.app` | Express (serverless) |
+| 🌐 Frontend | [`learnly-platform.vercel.app`](https://learnly-platform.vercel.app) | React + Vite (static) |
+| ⚙️ Backend | [`learnly-platform-i32x.vercel.app`](https://learnly-platform-i32x.vercel.app/health) | Express (serverless) |
 
 📖 **Full deployment guide:** See [`DEPLOYMENT.md`](./DEPLOYMENT.md)
 
