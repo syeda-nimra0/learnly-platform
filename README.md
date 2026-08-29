@@ -166,13 +166,13 @@
 <br />
 
 ---
-
 ## 🏗️ Architecture
 
 ```mermaid
 graph TB
     subgraph Browser["🌐 Browser (Client)"]
         UI[React 18 + Vite SPA]
+        UI -->|Axios + withCredentials| LB
     end
 
     subgraph Vercel["☁️ Vercel (Serverless)"]
@@ -180,13 +180,15 @@ graph TB
             FE[React Build<br/>Static CDN]
         end
         subgraph Backend["Backend Project (API)"]
-            LB[Load Balancer]
+            LB[Vercel Load Balancer]
             LB --> SF1[Serverless Fn 1]
             LB --> SF2[Serverless Fn 2]
-            LB --> SFN[Serverless Fn N]
-            SF1 & SF2 & SFN --> EX[Express App]
-            EX --> MW[Middleware Stack<br/>CORS · Helmet · Rate Limit · Auth]
-            MW --> R[Routes: /auth /ai /courses /enrollments /profile]
+            LB --> SF3[Serverless Fn N]
+            SF1 & SF2 & SF3 --> EX[Express App]
+            EX --> CORS[CORS Middleware]
+            EX --> RL[Rate Limiter]
+            EX --> AUTH[JWT Auth MW]
+            EX --> R[Routes: /auth /ai /courses /enrollments /profile]
             R --> CTRL[Controllers]
             CTRL --> SVC[Services Layer]
             SVC --> GEM[Gemini AI Service]
@@ -197,11 +199,10 @@ graph TB
     subgraph External["🔧 External Services"]
         MDB[(MongoDB Atlas<br/>Users · Courses · Enrollments)]
         GEMINI[Google Gemini API]
-        CDN[Cloudinary CDN]
+        CDN[Cloudinary CDN<br/>Media Storage]
     end
 
     UI -.->|Static Assets| FE
-    UI -->|Axios + Cookies| LB
     SVC --> MDB
     GEM --> GEMINI
     CLOU --> CDN
@@ -215,6 +216,8 @@ graph TB
 ```
 
 <br />
+
+
 
 ---
 
