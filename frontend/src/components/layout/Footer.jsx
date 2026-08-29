@@ -93,7 +93,6 @@ export default function Footer() {
         <div className="col-span-2">
           <Link to="/" className="flex items-center gap-2 mb-4">
             <img src={LOGO_URL} alt="Learnly" className="h-8 w-auto" />
-            <span className="text-2xl font-bold tracking-tightest">Learnly</span>
           </Link>
           <p className="text-white/60 text-sm leading-relaxed max-w-xs">
             Learnly helps you understand what to learn, why to learn it, how to learn it, and what to do next.
